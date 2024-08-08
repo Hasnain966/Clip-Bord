@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    color: black;
+    margin: 0;
+    padding: 0;
+  background-image: url('./picture/background\ 2.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.dark {
+    background: linear-gradient(to right, #141E30, #243B55);
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: 100%;
+    flex-direction: column;
+}
+
+.animation {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.signup-login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background 0.5s, color 0.5s;
+}
+
+.study_img{
+    width: 150px;
+    position: relative;
+    border-radius: 50%;
+    border:  2px solid yellow;
+}
+
+.signup-login-container.dark {
+    background-color: #333;
+    color: white;
+}
+
+.signup-login-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: background 0.5s, color 0.5s;
+}
+
+.signup-login-container input.dark {
+    background-color: #444;
+    color: white;
+    border: 1px solid #555;
+}
+
+.signup-login-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #0078d4;
+    color: white;
+    cursor: pointer;
+    transition: background 0.5s, color 0.5s;
+}
+
+.signup-login-container button.dark {
+    background-color: #005bb5;
+}
+
+.signup-login-container span {
+    color: #0078d4;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.signup-login-container span.dark {
+    color: #3399ff;
+}
+
+.editor-container {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 5px;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+    transition: background 0.5s, color 0.5s;
+}
+
+.toolbar.dark {
+    background-color: #555;
+}
+
+.toolbar button, .toolbar select, .toolbar input {
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.5s, color 0.5s;
+}
+
+.toolbar button.dark, .toolbar select.dark, .toolbar input.dark {
+    background-color: #666;
+    color: white;
+}
+
+#editor {
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: white;
+    margin-top: 10px;
+    line-height: 1.5;
+    transition: background 0.5s, color 0.5s;
+    box-sizing: border-box; /* Ensures padding is included in height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#editor.dark {
+    background-color: #333;
+    color: white;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #51ff00;
+    font-size: 2em;
+    animation: slidein 3s infinite;
+}
+
+footer p.dark {
+    color: #ff0000;
+}
+
+@keyframes slidein {
+    0% { transform: translateX(0%); }
+    10% { transform: translateX(1%); }
+    20% { transform: translateX(20%); }
+    30% { transform: translateX(30%); }
+    40% { transform: translateX(40%); }
+    50% { transform: translateX(50%); }
+    60% { transform: translateX(60%); }
+    70% { transform: translateX(70%); }
+    80% { transform: translateX(80%); }
+    90% { transform: translateX(90%); }
+    100% { transform: translateX(100%); }
+}

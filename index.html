@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Clipboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="images">
+        <img src="./picture/study.webp" alt="" class="study_img">
+    </div>
+    <div class="container">
+        <div class="animation" id="animation">
+            <h1>Welcome to Advanced Clipboard</h1>
+        </div>
+        <div class="signup-login-container" id="authContainer">
+            <div id="signupForm">
+                <h2>Sign Up</h2>
+                <input type="text" id="signupUsername" placeholder="Username">
+                <input type="password" id="signupPassword" placeholder="Password">
+                <button onclick="signup()">Sign Up</button>
+                <p>Already have an account? <span onclick="showLoginForm()">Login</span></p>
+            </div>
+            <div id="loginForm" style="display: none;">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <p>Don't have an account? <span onclick="showSignupForm()">Sign Up</span></p>
+            </div>
+        </div>
+        <div class="editor-container" id="editorContainer" style="display: none;">
+            <div class="toolbar">
+                <button onclick="formatText('bold')"><b><i class="fa-solid fa-bold"></i></b></button>
+                <button onclick="formatText('italic')"><i><i class="fa-solid fa-italic"></i></i></button>
+                <button onclick="formatText('underline')"><u><i class="fa-solid fa-underline"></i></u></button>
+                <button onclick="formatText('justifyLeft')"><i class="fa-solid fa-align-left"></i></button>
+                <button onclick="formatText('justifyCenter')"><i class="fa-solid fa-align-center"></i></button>
+                <button onclick="formatText('justifyRight')"><i class="fa-solid fa-align-right"></i></button>
+                <input type="color" id="fontColor" onchange="changeColor('foreColor', this.value)">
+                <input type="color" id="bgColor" onchange="changeColor('hiliteColor', this.value)">
+                <select onchange="changeFont(this.value)">
+                    <option value="">Font Family</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Lucida Sans">Lucida Sans</option>
+                </select>
+                <select onchange="changeFontSize(this.value)">
+                    <option value="">Font Size</option>
+                    <option value="1">8px</option>
+                    <option value="2">10pxt</option>
+                    <option value="3">12px</option>
+                    <option value="4">14px</option>
+                    <option value="5">18px</option>
+                    <option value="6">24px</option>
+                    <option value="7">36px</option>
+                </select>
+                <input type="file" id="imageUploader" accept="image/*" style="display: none;" onchange="insertImage(this)">
+                <button onclick="document.getElementById('imageUploader').click();"><i class="fa-regular fa-image"></i></button>
+                <button id="themeToggle" onclick="toggleTheme()">Toggle Theme <i class="fa-solid fa-toggle-on"></i></button>
+            </div>
+            <div id="editor" contenteditable="true" class="editor"></div>
+            <footer>
+                <p class="animated">Welcome</p>
+            </footer>
+        </div>
+    </div>
+</div>
+    <script src="scripts.js"></script>
+</body>
+</html>
